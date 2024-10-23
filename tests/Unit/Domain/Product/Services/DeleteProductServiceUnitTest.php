@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Unit\Application\Services\Products;
+namespace Tests\Unit\Domain\Product\Services;
 
-use App\Application\Services\Products\DeleteProductService;
 use App\Domain\Products\Entities\Product;
 use App\Domain\Products\Repositories\ProductRepositoryInterface;
+use App\Domain\Products\Services\DeleteProductService;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use PHPUnit\Framework\TestCase;
 use Tests\Mothers\Products\ProductMother;

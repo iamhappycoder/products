@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Unit\Application\Services\Products;
+namespace Tests\Unit\Domain\Product\Services;
 
-use App\Application\Services\Products\CreateProductService;
 use App\Domain\Products\Repositories\ProductRepositoryInterface;
+use App\Domain\Products\Services\CreateProductService;
 use PHPUnit\Framework\TestCase;
 use Tests\Mothers\Products\ProductMother;
 

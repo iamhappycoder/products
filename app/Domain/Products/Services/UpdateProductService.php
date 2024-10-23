@@ -1,14 +1,14 @@
 <?php
 
+
 declare(strict_types=1);
 
-namespace App\Application\Services\Products;
+namespace App\Domain\Products\Services;
 
 use App\Domain\Products\Entities\Product;
 use App\Domain\Products\Repositories\ProductRepositoryInterface;
-use App\Domain\Products\Services\CreateProductServiceInterface;
 
-readonly class CreateProductService implements CreateProductServiceInterface
+readonly class UpdateProductService implements CreateProductServiceInterface
 {
     public function __construct(
         private ProductRepositoryInterface $productRepository
@@ -17,6 +17,6 @@ readonly class CreateProductService implements CreateProductServiceInterface
 
     public function __invoke(Product $product): Product
     {
-        return $this->productRepository->create($product);
+        return $this->productRepository->update($product);
     }
 }

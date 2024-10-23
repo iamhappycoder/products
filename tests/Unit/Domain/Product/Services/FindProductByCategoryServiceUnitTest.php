@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Unit\Application\Services\Products;
+namespace Tests\Unit\Domain\Product\Services;
 
-use App\Application\Services\Products\FindProductByCategoryService;
 use App\Domain\Products\Entities\Category;
+use App\Domain\Products\Services\FindProductByCategoryService;
 use App\Infrastructure\Repositories\Products\ProductRepository;
 use Tests\Mothers\Products\CategoryMother;
 use Tests\TestCase;
