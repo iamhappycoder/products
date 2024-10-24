@@ -20,7 +20,7 @@ class CreateProductUseCaseUnitTest extends TestCase
         $createProductServiceMock = $this->createMock(CreateProductServiceInterface::class);
 
         $convertCurrencyMock->expects($this->once())->method('__invoke')
-            ->with(1.0)
+            ->with(1.0, 'USD', 'EUR')
             ->willReturn(93);
 
         $createProductServiceMock->expects($this->once())->method('__invoke')
