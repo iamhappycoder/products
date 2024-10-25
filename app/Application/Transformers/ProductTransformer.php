@@ -34,4 +34,31 @@ readonly class ProductTransformer
             $productDTO->categoryId,
         );
     }
+
+    public static function toProductDTO(
+        Product $product,
+    ): ProductDTO {
+        return new ProductDTO(
+            $product->id,
+            $product->name,
+            $product->description,
+            $product->price,
+            $product->categoryId,
+        );
+    }
+
+    /**
+     * @param Product[] $products
+     *
+     * @return ProductDTO[]
+     */
+    public static function toProductDTOList(array $products): array
+    {
+        $productDTOs = [];
+        foreach ($products as $product) {
+            $productDTOs[] =self::toProductDTO($product);
+        }
+
+        return $productDTOs;
+    }
 }
